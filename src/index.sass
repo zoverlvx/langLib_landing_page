@@ -1,0 +1,154 @@
+*
+  margin: 0em
+  padding: 0em
+  text-decoration: none
+  text-align: center
+  box-sizing: border-box
+
+#margin_top
+  margin: 1em 0em 0em 0em
+  text-align: center
+
+.language_dropdown
+  font-size: 12px
+  border: 1px solid silver
+  padding: 6
+  background-color: #ddd
+  width: 30%
+  margin: auto
+  
+.language_dropdown_link
+  color: black
+
+.wrapper
+  margin: 10px
+  padding: 10px
+  height: 400px
+  overflow: hidden
+
+.center
+  margin: 10px 0
+  padding: 30px
+
+.inline
+  text-align: center
+
+.btn_span
+  vertical-align: top
+  width: 30%
+  background: #333
+  border-radius: 5px
+  color: white
+  font-size: 1.5rem
+  text-align: center
+  display: block
+  cursor: pointer
+  padding: 3px 8px
+  margin-bottom: auto
+  margin-right: auto
+  margin-left: auto
+
+.btn_link
+  color: white
+
+.header li
+  display: inline
+
+.language_detail
+  margin: 10px
+  padding: 30px
+
+#margin_top_bottom
+  margin: 1em 0em 1em 0em
+  text-align: center
+
+.numberlist
+  width: 40%
+  margin-left: auto
+  margin-right: auto
+  li:nth-child(even)
+    background-color: #ddd
+
+#col_head
+  background-color: #444
+  color: #fff
+
+.list ul
+  &:nth-child(odd)
+    background-color: #ddd
+  &:nth-child(even)
+    background-color: #fff
+body
+  background-color: #eee
+  color: #444
+  font-family: sans-serif
+  margin: auto
+  width: 50%
+  padding: 10px
+
+li
+  list-style: none
+  padding: 10px
+
+hr
+  width: 80%
+
+span
+  text: white
+
+main
+  padding-top: 50px
+
+p
+  padding-bottom: 20px
+
+@media screen and (min-width: 600px)
+  .list
+    display: table
+    margin-left: auto
+    margin-right: auto
+    ul
+      display: table-row
+      > li
+        display: table-cell
+        padding: .5em .5em
+
+/* small */
+
+@media screen and (max-width: 599px)
+  .list
+    ul
+      border: solid 1px #ccc
+      display: block
+      list-style: none
+      margin: 1em
+      padding: .5em 1em
+      &:first-child
+        display: none
+      > li
+        display: block
+        padding: .25em 0
+      &:nth-child(odd) > li + li
+        border-top: solid 1px #ccc
+      &:nth-child(even) > li + li
+        border-top: solid 1px #eee
+      > li:before
+        color: #000
+        content: attr(data-label)
+        display: inline-block
+        font-size: 75%
+        font-weight: bold
+        text-transform: capitalize
+        vertical-align: top
+        width: 50%
+    p
+      margin: -1em 0 0 50%
+
+/* tiny */
+
+@media screen and (max-width: 349px)
+  .list
+    ul > li:before
+      display: block
+    p
+      margin: 0
